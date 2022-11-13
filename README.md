@@ -22,7 +22,31 @@ Inspired by [ZURB Template](https://get.foundation/sites/docs/starter-projects.h
 - Development mode with [BrowserSync](https://browsersync.io/) server, file watching and on the fly compilation
 - Content decoupled from layout for easy translation via data files
 
-### Dependencies
+### Dependencies (referenced from external CDN)
 - [jQuery](https://jquery.com/)
 - [GSAP](https://greensock.com/gsap/) with ScrollTrigger and EasePack plugins - animations and transitions
 - [Swiper](https://swiperjs.com/) - carousels and sliders
+
+### **Usage**
+
+Clone project repo locally
+To manually set up the template, first download it with Git:
+```bash
+git clone https://github.com/undp/design-system-starter-template projectname
+```
+
+Install dependencies
+```bash
+cd projectname
+yarn
+```
+
+Run development server (at http://localhost:8000)
+```bash
+yarn start
+```
+
+When ready for publication build production ready assets (published to /docs directory)
+```bash
+yarn build
+```
