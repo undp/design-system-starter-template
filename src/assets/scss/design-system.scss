@@ -1,0 +1,23 @@
+// setup
+@import 'assets/scss/variables';
+@import 'assets/scss/breakpoints';
+// @import 'assets/scss/mixins';
+@import 'assets/scss/typography';
+@import 'assets/scss/grid';
+@import 'assets/scss/swiper';
+
+// Base typography and other base components
+@import 'Atom/BaseTypography/Abbr/abbr';
+@import 'Atom/BaseTypography/Blockquote/blockquote';
+@import 'Atom/BaseTypography/Cite/cite';
+@import 'Atom/BaseTypography/Code/code';
+@import 'Atom/BaseTypography/Mark/mark';
+@import 'Atom/BaseTypography/Quotation/quotation';
+@import 'Atom/BaseTypography/Small/small';
+@import 'Atom/Images/Image/image';
+@import 'Atom/Images/ImageCredit/image-credit';
+@import 'Atom/Navigation/MenuItems/menu-items';
+@import 'Atom/ReachElement/Details/details';
+@import 'Atom/ReachElement/Figcaption/figcaption';
+@import 'Atom/Table/table';
+@import 'Atom/Video/video';

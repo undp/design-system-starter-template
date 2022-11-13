@@ -1,0 +1,12 @@
+# generic info
+lang: en
+language: English
+
+# page metadata
+meta:
+  title:
+
+content:
+  link:
+    url: https://design.undp.org/
+    label: UNDP Design System

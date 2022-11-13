@@ -1,2 +1,52 @@
-# design-system-starter-template
-Boilerplate starting project for sites using UNDP Design System
+# UNDP Design System starter template
+Boilerplate starting project for sites using [UNDP Design System](https://design.undp.org)
+
+## What's included?
+
+### **Baseline stylesheet** (7.3KB minified and gzipped)
+- [Grid system](https://design.undp.org/?path=/story/foundation-layout-grid--page)
+- UNDP official web typefaces: ProximaNova and Söhne
+- basic HTML elements styling:
+  - [H1-6 headings](https://design.undp.org/?path=/story/foundation-typography-base-typography--headings)
+  - Paragraph text & [links](https://design.undp.org/?path=/story/foundation-typography-links--links)
+  - [Inline elements](https://design.undp.org/?path=/docs/foundation-typography-base-typography) (abbr, blockuote, cite, code, mark, quotation)
+  - [Image](https://design.undp.org/?path=/story/foundation-images-image-with-credit-caption--image-with-credit-caption) and Video default styling, including captions and credit
+  - [Table](https://design.undp.org/?path=/story/foundation-typography-table--table)
+
+### **Ready to use static site generator**
+Inspired by [ZURB Template](https://get.foundation/sites/docs/starter-projects.html#zurb-template)
+- Sass compilaton. Using DartSass library with source maps support.
+- Javascript compilation. Transpiled with [Babel](https://babeljs.io/), bundling is handled via [Webpack](https://webpack.js.org/)
+- Assets copying for distribution. Image compressed and optimized using [imagemin](https://github.com/imagemin/imagemin)
+- Page compilation. Based on flat file compiler [Panini](https://get.foundation/sites/docs/panini.html) using [Handlebars](https://handlebarsjs.com/) template language
+- Development mode with [BrowserSync](https://browsersync.io/) server, file watching and on the fly compilation
+- Content decoupled from layout for easy translation via data files
+
+### Dependencies (referenced from external CDN)
+- [jQuery](https://jquery.com/)
+- [GSAP](https://greensock.com/gsap/) with ScrollTrigger and EasePack plugins - animations and transitions
+- [Swiper](https://swiperjs.com/) - carousels and sliders
+
+### **Usage**
+
+Clone project repo locally
+To manually set up the template, first download it with Git:
+```bash
+git clone https://github.com/undp/design-system-starter-template projectname
+```
+
+Install dependencies
+```bash
+cd projectname
+yarn
+```
+
+Run development server (at http://localhost:8000)
+```bash
+yarn start
+```
+
+When ready for publication build production ready assets (published to /docs directory)
+```bash
+yarn build
+```
