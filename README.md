@@ -31,30 +31,34 @@ Inspired by [ZURB Template](https://get.foundation/sites/docs/starter-projects.h
 
 Clone project repo locally
 To manually set up the template, first download it with Git:
-```bash
+```
 git clone https://github.com/undp/design-system-starter-template projectname
 cd projectname
 ```
 
-Add Github repo authentication information.
-Add `.npmrc` file to the project directory with following content, where `{PERSONAL_TOKEN}` is yor [Personal Authentication token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-personal-access-token-classic) with at least **read:packages** permissions
-```bash
-//npm.pkg.github.com/:_authToken={PERSONAL_TOKEN}
-@undp:registry=https://npm.pkg.github.com
-```
-
+[comment]: # (Add Github repo authentication information.)
+[comment]: # (Add `.npmrc` file to the project directory with following content, where `{PERSONAL_TOKEN}` is yor [Personal Authentication token]\(https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-personal-access-token-classic\) with at least **read:packages** permissions)
+[comment]: # (```)
+[comment]: # (//npm.pkg.github.com/:_authToken={PERSONAL_TOKEN})
+[comment]: # (@undp:registry=https://npm.pkg.github.com)
+[comment]: # (```)
 
 Install dependencies
-```bash
+```
 yarn
 ```
 
 Run development server (at http://localhost:8000)
-```bash
+```
 yarn start
 ```
 
 When ready for publication build production ready assets (published to /docs directory)
-```bash
+```
 yarn build
+```
+
+Don't forget to relink Git to your own repository:
+```
+git remote set-url origin <remote_url>
 ```
