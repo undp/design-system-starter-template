@@ -1,0 +1,151 @@
+// use CDN fonts
+
+@font-face {
+  font-display: swap;
+  font-family: 'ProximaNova';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url('#{$cdn}fonts/proximanova-regular-webfont.woff2') format('woff2'),
+    url('#{$cdn}fonts/proximanova-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'ProximaNova';
+  font-style: italic;
+  font-weight: 400;
+  src:
+    url('#{$cdn}fonts/proximanova-regularit-webfont.woff2') format('woff2'),
+    url('#{$cdn}fonts/proximanova-regularit-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'ProximaNova';
+  font-style: normal;
+  font-weight: 600;
+  src:
+    url('#{$cdn}fonts/proximanova-semibold-webfont.woff2') format('woff2'),
+    url('#{$cdn}fonts/proximanova-semibold-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'ProximaNova';
+  font-style: italic;
+  font-weight: 600;
+  src:
+    url('#{$cdn}fonts/proximanova-semiboldit-webfont.woff2') format('woff2'),
+    url('#{$cdn}fonts/proximanova-semiboldit-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'ProximaNova';
+  font-style: normal;
+  font-weight: 700;
+  src:
+    url('#{$cdn}fonts/proximanova-bold-webfont.woff2') format('woff2'),
+    url('#{$cdn}fonts/proximanova-bold-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'ProximaNova';
+  font-style: italic;
+  font-weight: 700;
+  src:
+    url('#{$cdn}fonts/proximanova-boldit-webfont.woff2') format('woff2'),
+    url('#{$cdn}fonts/proximanova-boldit-webfont.woff') format('woff');
+}
+
+/* SohneBreit */
+@font-face {
+  font-display: swap;
+  font-family: 'SohneBreit';
+  font-style: normal;
+  font-weight: 700;
+  src:
+    url('#{$cdn}fonts/soehne-breit-web-dreiviertelfett.woff2') format('woff2'),
+    url('#{$cdn}fonts/soehne-breit-web-dreiviertelfett.woff') format('woff');
+  unicode-range: U+0000-024F, U+1E00-1EFF, U+2000-206F, U+2070-209F;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'SohneBreit';
+  font-style: italic;
+  font-weight: 700;
+  src:
+    url('#{$cdn}fonts/soehne-breit-web-dreiviertelfett-kursiv.woff2') format('woff2'),
+    url('#{$cdn}fonts/soehne-breit-web-dreiviertelfett-kursiv.woff') format('woff');
+  unicode-range: U+0000-024F, U+1E00-1EFF, U+2000-206F, U+2070-209F;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'SohneBreit';
+  font-style: normal;
+  font-weight: 800;
+  src:
+    url('#{$cdn}fonts/soehne-breit-web-fett.woff2') format('woff2'),
+    url('#{$cdn}fonts/soehne-breit-web-fett.woff') format('woff');
+  unicode-range: U+0000-024F, U+1E00-1EFF, U+2000-206F, U+2070-209F;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'SohneBreit';
+  font-style: italic;
+  font-weight: 800;
+  src:
+    url('#{$cdn}fonts/soehne-breit-web-fett-kursiv.woff2') format('woff2'),
+    url('#{$cdn}fonts/soehne-breit-web-fett-kursiv.woff') format('woff');
+  unicode-range: U+0000-024F, U+1E00-1EFF, U+2000-20CF;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'NotoSans';
+  font-weight: 300;
+  src:
+    url('#{$cdn}fonts/NotoSansMyanmar-Light.woff2') format('woff2'),
+    url('#{$cdn}fonts/NotoSansMyanmar-Light.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'NotoSans';
+  font-weight: 400;
+  src:
+    url('#{$cdn}fonts/NotoSansMyanmar-Regular.woff2') format('woff2'),
+    url('#{$cdn}fonts/NotoSansMyanmar-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'NotoSans';
+  font-weight: 500;
+  src:
+    url('#{$cdn}fonts/NotoSansMyanmar-Medium.woff2') format('woff2'),
+    url('#{$cdn}fonts/NotoSansMyanmar-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'NotoSans';
+  font-weight: 600;
+  src:
+    url('#{$cdn}fonts/NotoSansMyanmar-SemiBold.woff2') format('woff2'),
+    url('#{$cdn}fonts/NotoSansMyanmar-SemiBold.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'NotoSans';
+  font-weight: 600;
+  src:
+    url('#{$cdn}fonts/NotoSansMyanmar-Bold.woff2') format('woff2'),
+    url('#{$cdn}fonts/NotoSansMyanmar-Bold.woff') format('woff');
+}

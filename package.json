@@ -1,0 +1,60 @@
+{
+  "name": "@undp/design-system-starter-template",
+  "version": "1.0.0",
+  "description": "Boilerplate starting project for sites using UNDP Design System",
+  "main": "gulpfile.babel.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build --production"
+  },
+  "author": "Jura Khrapunov <jura.khrapunov@undp.org>",
+  "license": "MIT",
+  "dependencies": {
+    "@undp/design-system": "^1.0.10",
+    "gsap": "^3.11.3",
+    "jquery": "^3.6.1",
+    "normalize.css": "^8.0.1",
+    "swiper": "^8.4.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.2",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/register": "^7.18.9",
+    "autoprefixer": "^10.4.13",
+    "babel-loader": "^9.1.0",
+    "browser-sync": "^2.27.10",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-cli": "^2.3.0",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-load-plugins": "^2.0.8",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser": "^2.1.0",
+    "panini": "latest",
+    "postcss": "^8.4.18",
+    "postcss-uncss": "^0.17.0",
+    "rimraf": "^3.0.2",
+    "sass": "^1.56.1",
+    "uncss": "^0.17.3",
+    "vinyl-named": "^1.1.0",
+    "webpack": "^5.75.0",
+    "webpack-stream": "^7.0.0",
+    "yargs": "^17.6.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/undp/design-system-starter-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/undp/design-system-starter-template/issues",
+    "email": "jura.khrapunov@undp.org"
+  },
+  "private": true,
+  "browserslist": [
+    "last 2 versions"
+  ]
+}
