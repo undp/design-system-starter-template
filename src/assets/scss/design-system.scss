@@ -4,7 +4,6 @@
 // @import 'assets/scss/mixins';
 @import 'assets/scss/typography';
 @import 'assets/scss/grid';
-@import 'assets/scss/swiper';
 
 // Base typography and other base components
 @import 'Atom/BaseTypography/Abbr/abbr';
@@ -21,3 +20,97 @@
 @import 'Atom/ReachElement/Figcaption/figcaption';
 @import 'Atom/Table/table';
 @import 'Atom/Video/video';
+
+// individual components
+
+// Deafult Swiper styling, required by
+// - Parallax Cards
+// - all Carousels
+// - Page Hero - cards
+// @import 'assets/scss/swiper';
+
+// Form elements
+// @import 'Components/Forms/Checkbox/checkbox';
+// @import 'Components/Forms/Radio/radio';
+// @import 'Components/Forms/InputFields/input-fields';
+// @import 'Components/Forms/SearchExpand/search-expand';
+// @import 'Components/Forms/Dropdowns/CustomSelect/custom-select';
+// @import 'Components/Forms/Dropdowns/MultiSelect/multi-select';
+// @import 'Components/Forms/TextPanel/text-panel';
+
+// Navigation components
+// @import 'Components/Navigationcomponents/Breadcrumbs/breadcrumbs';
+// @import 'Components/Navigationcomponents/Pagination/pagination';
+// @import 'Components/Navigationcomponents/Sidebar/sidebar';
+// @import 'Molecules/SidebarData/sidebar-data';
+
+// Headers
+// consult https://design.undp.org/?path=/docs/components-navigation-components-main-navigation-global-header--global-header
+// or https://design.undp.org/?path=/story/components-navigation-components-main-navigation-country-header--country-header
+// to see what to include
+// @import 'Components/Navigationcomponents/Mainnavigation/CountrySiteHeader/country-site-header';
+// @import 'Components/Navigationcomponents/Mainnavigation/GlobalHeader/global-header';
+// @import 'Components/Navigationcomponents/Menu/menu';
+// @import 'Components/Navigationcomponents/Mainnavigation/MegaMenu/mega-menu';
+// @import 'Components/Navigationcomponents/Mainnavigation/MobileNav/mobile-nav';
+
+// UI components
+// @import 'Components/UIcomponents/Accordion/accordion';
+// @import 'Organism/Blocks/AuthorSummary/author-summary';
+// @import 'Components/UIcomponents/Author/AuthorColumn/author-column';
+// @import 'Components/UIcomponents/Author/AuthorCard/author-card';
+// @import 'Components/UIcomponents/LanguageSwitcher/language-switcher';
+// @import 'Components/UIcomponents/Modal/modal';
+// @import 'Organism/Stats/stats';
+
+// Buttons and links
+// @import 'Components/UIcomponents/Buttons/CtaButton/buttons';
+// @import 'Components/UIcomponents/Buttons/Chips/chips';
+// @import 'Components/UIcomponents/Buttons/CtaLink/cta-link';
+
+// Cards
+// @import 'Components/UIcomponents/Cards/BioCard/bio-card';
+// @import 'Components/UIcomponents/Cards/ContentCard/content-card';
+// @import 'Molecules/Blocks/DownloadCard/download-card';
+// @import 'Components/UIcomponents/Cards/FeaturedCard/featured-content-card';
+// @import 'Components/UIcomponents/Cards/ImageRevealCTACard/image-revel-cta-card';
+// @import 'Components/UIcomponents/Cards/ParallaxCard/parallax-cards';
+// @import 'Molecules/ParallaxCard/parallax-card';
+// @import 'Molecules/Blocks/PublicationCard/publication-card';
+// @import 'Components/UIcomponents/Cards/StatsCards/stats-cards';
+
+// Carousels
+// @import 'Components/UIcomponents/Carousel/FixedSizeCarousel/fixed-size-carousel';
+// @import 'Components/UIcomponents/Carousel/FluidImageSizeCarousel/fluid-image-size-carousel';
+// @import 'Components/UIcomponents/Carousel/ImageOnlyCarousel/image-only-carousel';
+
+// Footer
+// @import 'Organism/Footer/footer';
+// @import 'Components/Forms/NewsletterSignUp/newsletter-signup'; // optional, only if form is included
+
+// Galleries
+// @import 'Components/UIcomponents/Gallery/LightboxGallery/lightbox';
+// @import 'Components/UIcomponents/Gallery/LightboxGallery/lightbox-gallery';
+// @import 'Components/UIcomponents/Gallery/ParallaxGallery/parallax-gallery';
+
+// Heros
+// @import 'Components/UIcomponents/Hero/HomePageHero/homepage-hero';
+// @import 'Components/UIcomponents/Hero/PageHero/page-hero';
+// @import 'Components/UIcomponents/Hero/PageHeroCards/pagehero-cards';
+// @import 'Molecules/Blocks/CountryCard/country-card';
+
+// Text components/blocks
+// @import 'Molecules/Text/BlockquoteComponent/blockquotecomp'; // Callout
+// @import 'Molecules/Text/CtaBlock/cta-block'; // CTA Block
+// @import 'Molecules/Text/HeadingBig/headingbig'; // Heading big block
+// @import 'Molecules/Text/Post/post'; // Post block
+// @import 'Molecules/Text/SmallCopy/smallcopy'; // Small copy lockup
+// @import 'Molecules/Text/Tertiary/tertiary'; // Tertiary block
+// @import 'Molecules/Text/TextBackground/textbackground'; // Text background
+// @import 'Molecules/Text/TextCta/textcta'; // text CTA
+
+// Utilities
+// @import 'Utilities/FrostedImage/frosted-background';
+// @import 'Utilities/Loader/loader';
+// @import 'Utilities/ProgressBar/progress-bar';
+// @import 'Atom/Navigation/ProgressBar/Navigation/progress-bar-navigation';
