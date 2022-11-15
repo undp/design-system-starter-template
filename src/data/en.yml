@@ -1,6 +1,7 @@
 # generic info
 lang: en
 language: English
+cdn: https://undp.github.io/design-system/
 
 # page metadata
 meta:

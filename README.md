@@ -1,9 +1,9 @@
 # UNDP Design System starter template
-Boilerplate starting project for sites using [UNDP Design System](https://design.undp.org)
+Boilerplate project for sites using [UNDP Design System](https://design.undp.org)
 
 ## What's included?
 
-### **Baseline stylesheet** (7.3KB minified and gzipped)
+### **Baseline stylesheet** (7KB minified and gzipped)
 - [Grid system](https://design.undp.org/?path=/story/foundation-layout-grid--page)
 - UNDP official web typefaces: ProximaNova and Söhne
 - basic HTML elements styling:
