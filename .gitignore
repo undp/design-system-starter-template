@@ -105,4 +105,7 @@ dist
 
 # NPM config
 .npmrc
+
+# Yarn cache and config
+.yarn
 .yarnrc.yml
