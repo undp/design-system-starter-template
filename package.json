@@ -55,6 +55,9 @@
     "email": "jura.khrapunov@undp.org"
   },
   "private": true,
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "browserslist": [
     "last 2 versions"
   ]
