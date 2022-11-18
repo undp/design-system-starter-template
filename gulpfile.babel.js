@@ -15,6 +15,7 @@ import imagemin      from 'gulp-imagemin';
 
 const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
+const url = require("postcss-url");
 
 // const uncss = require('postcss-uncss'); // uncomment if required
 // const UNCSS_OPTIONS = {
@@ -32,6 +33,7 @@ const PATH_PUBLISH = 'docs';
 const PATH_ASSETS = ['src/assets/**/*', '!src/assets/{img,js,scss}/**/*'];
 const PATH_SASS = ['node_modules/@undp/design-system/stories'];
 const PATH_JS = 'src/assets/js/app.js';
+const CDN = 'https://undp.github.io/design-system/';
 const PORT = 8000;
 
 // Check for --production flag
@@ -93,6 +95,13 @@ function sassBuild() {
   const postCssPlugins = [
     // Autoprefixer
     autoprefixer(),
+    // externalize icon links in imported stylesheets
+    url({
+      filter: '**/assets/icons/*.svg',
+      url: (asset) => {
+        return CDN + '/images/' + asset.url.split('/').at(-1);
+      },
+    }),
     // UnCSS - Uncomment to remove unused styles in production
     // PRODUCTION && uncss(UNCSS_OPTIONS),
   ].filter(Boolean);

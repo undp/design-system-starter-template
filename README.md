@@ -36,12 +36,19 @@ git clone https://github.com/undp/design-system-starter-template projectname
 cd projectname
 ```
 
-[comment]: # (Add Github repo authentication information.)
-[comment]: # (Add `.npmrc` file to the project directory with following content, where `{PERSONAL_TOKEN}` is yor [Personal Authentication token]\(https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-personal-access-token-classic\) with at least **read:packages** permissions)
-[comment]: # (```)
-[comment]: # (//npm.pkg.github.com/:_authToken={PERSONAL_TOKEN})
-[comment]: # (@undp:registry=https://npm.pkg.github.com)
-[comment]: # (```)
+Add Github repo authentication information.
+Add `.npmrc` file to the project directory with following content, where `{PERSONAL_TOKEN}` is yor [Personal Authentication token]\(https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-personal-access-token-classic\) with at least **read:packages** permissions
+```
+//npm.pkg.github.com/:_authToken={PERSONAL_TOKEN}
+@undp:registry=https://npm.pkg.github.com
+```
+In case you are using Yarn2 you have to add file named `.yarnrc.yml` or update existing with the following snippet:
+```
+npmScopes:
+  undp:
+    npmRegistryServer: https://npm.pkg.github.com
+    npmAuthToken: {PERSONAL_TOKEN}
+```
 
 Install dependencies
 ```
