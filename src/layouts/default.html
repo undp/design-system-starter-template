@@ -6,7 +6,9 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{this.meta.title}}</title>
-    <link rel="stylesheet" href="{{@root.root}}assets/css/app.css">
+    {{#each @root.ds}}<link rel="stylesheet" href="{{../cdn}}css/{{this}}" media="print" onload="this.media='all'">
+    {{/each}}
+    <link rel="stylesheet" href="{{@root.root}}assets/css/app.css" media="print" onload="this.media='all'">
   </head>
   <body id="top">
 
@@ -16,7 +18,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/EasePack.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="{{@root.root}}assets/js/app.js"></script>
 
   </body>

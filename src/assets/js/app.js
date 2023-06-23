@@ -5,7 +5,7 @@ import $ from 'jquery';
 // import { multiSelect } from '@undp/design-system/stories/assets/js/multi-select';
 // import { select } from '@undp/design-system/stories/assets/js/select';
 // import { sidebarNav, sidebarMenu } from '@undp/design-system/stories/assets/js/sidebar';
-// import { navigationInitialize } from '@undp/design-system/stories/assets/js/navigation';
+// import { navigationInitialize, navigationMultiLevelEdgeDetection, navigationOverFlow } from '@undp/design-system/stories/assets/js/navigation';
 // import { accordion } from '@undp/design-system/stories/assets/js/accordion';
 // import { parallaxEffect } from '@undp/design-system/stories/assets/js/parallax';
 // import { swiper } from '@undp/design-system/stories/assets/js/swiper';
@@ -35,8 +35,10 @@ require('@undp/design-system/stories/assets/js/undp');
 // sidebarNav();
 // sidebarMenu();
 
-// Mega menu
+// Mega menu / Dropdown menu
 // navigationInitialize();
+// navigationMultiLevelEdgeDetection();
+// navigationOverFlow();
 
 // Accordion
 // accordion();
