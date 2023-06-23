@@ -6,7 +6,7 @@ import yargs         from 'yargs';
 import browser       from 'browser-sync';
 import gulp          from 'gulp';
 import panini        from 'panini';
-import rimraf        from 'rimraf';
+import { rimraf }    from 'rimraf';
 import webpackStream from 'webpack-stream';
 import webpack2      from 'webpack';
 import named         from 'vinyl-named';
@@ -53,7 +53,8 @@ gulp.task('default',
 // Delete the "docs" folder
 // This happens every time a build starts
 function clean(done) {
-  rimraf(PATH_DIST, done);
+  rimraf.sync(PATH_DIST);
+  done()
 }
 
 // Copy files out of the assets folder
