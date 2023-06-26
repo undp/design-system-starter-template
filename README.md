@@ -3,7 +3,7 @@ Boilerplate project for sites using [UNDP Design System](https://design.undp.org
 
 ## What's included?
 
-### **Baseline stylesheet** (7KB minified and gzipped)
+### **Baseline stylesheet** (17KB minified and gzipped)
 - [Grid system](https://design.undp.org/?path=/story/foundation-layout-grid--page)
 - UNDP official web typefaces: ProximaNova and Söhne
 - basic HTML elements styling:
@@ -12,6 +12,7 @@ Boilerplate project for sites using [UNDP Design System](https://design.undp.org
   - [Inline elements](https://design.undp.org/?path=/docs/foundation-typography-base-typography) (abbr, blockuote, cite, code, mark, quotation)
   - [Image](https://design.undp.org/?path=/story/foundation-images-image-with-credit-caption--image-with-credit-caption) and Video default styling, including captions and credit
   - [Table](https://design.undp.org/?path=/story/foundation-typography-table--table)
+- served via jsDelivr CDN with <20ms latency
 
 ### **Ready to use static site generator**
 Inspired by [ZURB Template](https://get.foundation/sites/docs/starter-projects.html#zurb-template)
@@ -52,17 +53,17 @@ npmScopes:
 
 Install dependencies
 ```
-yarn
+npm install
 ```
 
 Run development server (at http://localhost:8000)
 ```
-yarn start
+npm run start
 ```
 
 When ready for publication build production ready assets (published to /docs directory)
 ```
-yarn build
+npm run build
 ```
 
 Don't forget to relink Git to your own repository:
