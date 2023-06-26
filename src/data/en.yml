@@ -1,7 +1,7 @@
 # generic info
 lang: en
 language: English
-cdn: https://undp.github.io/design-system/
+cdn: https://cdn.jsdelivr.net/gh/undp/design-system@1.2/docs/
 
 # page metadata
 meta:

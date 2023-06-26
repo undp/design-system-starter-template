@@ -33,7 +33,7 @@ const PATH_PUBLISH = 'docs';
 const PATH_ASSETS = ['src/assets/**/*', '!src/assets/{img,js,scss}/**/*'];
 const PATH_SASS = ['node_modules/@undp/design-system/stories'];
 const PATH_JS = 'src/assets/js/app.js';
-const CDN = 'https://undp.github.io/design-system/';
+const CDN = 'https://cdn.jsdelivr.net/gh/undp/design-system@1.2/docs/';
 const PORT = 8000;
 
 // Check for --production flag
