@@ -1,6 +1,6 @@
 {
   "name": "@undp/design-system-starter-template",
-  "version": "1.2.1",
+  "version": "1.2.3",
   "description": "Boilerplate starting project for sites using UNDP Design System",
   "main": "gulpfile.babel.js",
   "scripts": {
@@ -10,7 +10,7 @@
   "author": "Jura Khrapunov <jura.khrapunov@undp.org>",
   "license": "MIT",
   "dependencies": {
-    "@undp/design-system": "^1.2.0",
+    "@undp/design-system": "^1.2",
     "glightbox": "^3.2.0",
     "gsap": "^3.12.1",
     "jquery": "^3.7.0",
@@ -57,9 +57,6 @@
     "email": "jura.khrapunov@undp.org"
   },
   "private": true,
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "browserslist": [
     "last 2 versions"
   ]
