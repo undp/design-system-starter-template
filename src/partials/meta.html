@@ -1,0 +1,36 @@
+<title>{{this.meta.title}}</title>
+<meta name="description" content="{{this.meta.description}}" />
+{{#if this.meta.keywords}}
+  <meta name="keywords" content="{{this.meta.keywords}}" />
+{{/if}}
+<link rel="canonical" href="{{this.canonical}}{{#ifequal this.lang "en"}}{{else}}{{this.lang}}/{{/ifequal}}" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="{{this.meta.ogtitle}}" />
+<meta property="og:site_name" content="{{this.logo}}" />
+<meta property="og:url" content="{{this.canonical}}{{#ifequal this.lang "en"}}{{else}}{{this.lang}}/{{/ifequal}}" />
+<meta property="og:description" content="{{this.meta.description}}" />
+<meta property="og:image" content="{{this.canonical}}assets/img/{{this.meta.image}}" />
+<meta property="og:image:width" content="1440" />
+<meta property="og:image:height" content="768" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@undp" />
+<link rel="alternate" hreflang="en" href="{{@root.root}}" />
+<link rel="alternate" hreflang="fr" href="{{@root.root}}fr/" />
+<link rel="alternate" hreflang="es" href="{{@root.root}}es/" />
+
+{{#each @root.ds}}
+  <link rel="preload" href="{{../cdn}}css/{{this}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+{{/each}}
+<link rel="preload" href="{{@root.root}}assets/css/app.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+{{#if this.gtm}}<!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', '{{this.gtm}}');</script>
+  <!-- End Google Tag Manager -->
+{{/if}}

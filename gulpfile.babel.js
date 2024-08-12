@@ -1,17 +1,17 @@
 // inspired by Zurb Foundation starter project
 // https://github.com/foundation/foundation-zurb-template
 
-import plugins       from 'gulp-load-plugins';
-import yargs         from 'yargs';
-import browser       from 'browser-sync';
-import gulp          from 'gulp';
-import panini        from 'panini';
-import { rimraf }    from 'rimraf';
+import plugins from 'gulp-load-plugins';
+import yargs from 'yargs';
+import browser from 'browser-sync';
+import gulp from 'gulp';
+import panini from 'panini';
+import { rimraf } from 'rimraf';
 import webpackStream from 'webpack-stream';
-import webpack2      from 'webpack';
-import named         from 'vinyl-named';
-import autoprefixer  from 'autoprefixer';
-import imagemin      from 'gulp-imagemin';
+import webpack2 from 'webpack';
+import named from 'vinyl-named';
+import autoprefixer from 'autoprefixer';
+import imagemin from 'gulp-imagemin';
 
 const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
@@ -33,7 +33,7 @@ const PATH_PUBLISH = 'docs';
 const PATH_ASSETS = ['src/assets/**/*', '!src/assets/{img,js,scss}/**/*'];
 const PATH_SASS = ['node_modules/@undp/design-system/stories'];
 const PATH_JS = 'src/assets/js/app.js';
-const CDN = 'https://cdn.jsdelivr.net/gh/undp/design-system@1.2/docs/';
+const CDN = 'https://cdn.jsdelivr.net/npm/@undp/design-system-assets/';
 const PORT = 8000;
 
 // Check for --production flag
@@ -97,12 +97,12 @@ function sassBuild() {
     // Autoprefixer
     autoprefixer(),
     // externalize icon links in imported stylesheets
-    url({
-      filter: '**/assets/icons/*.svg',
-      url: (asset) => {
-        return CDN + '/images/' + asset.url.split('/').at(-1);
-      },
-    }),
+    // url({
+    //   filter: '**/assets/icons/*.svg',
+    //   url: (asset) => {
+    //     return CDN + '/images/' + asset.url.split('/').at(-1);
+    //   },
+    // }),
     // UnCSS - Uncomment to remove unused styles in production
     // PRODUCTION && uncss(UNCSS_OPTIONS),
   ].filter(Boolean);
@@ -112,9 +112,9 @@ function sassBuild() {
     .pipe(sass({
       includePaths: PATH_SASS
     })
-    .on('error', sass.logError))
+      .on('error', sass.logError))
     .pipe(postcss(postCssPlugins))
-    .pipe($.if(PRODUCTION, $.cleanCss({ compatibility: 'ie11', level: {1: {specialComments: 0}} })))
+    .pipe($.if(PRODUCTION, $.cleanCss({ compatibility: 'ie11', level: { 1: { specialComments: 0 } } })))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest(PATH_DIST + '/assets/css'))
     .pipe(browser.reload({ stream: true }));
@@ -129,7 +129,7 @@ let webpackConfig = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: [ "@babel/preset-env" ],
+            presets: ["@babel/preset-env"],
             compact: false
           }
         }
@@ -163,13 +163,13 @@ function javascript() {
 function images() {
   return gulp.src('src/assets/img/**/*')
     .pipe($.if(PRODUCTION, imagemin([
-      imagemin.gifsicle({interlaced: true}),
-      imagemin.mozjpeg({quality: 85, progressive: true}),
-      imagemin.optipng({optimizationLevel: 5}),
+      imagemin.gifsicle({ interlaced: true }),
+      imagemin.mozjpeg({ quality: 85, progressive: true }),
+      imagemin.optipng({ optimizationLevel: 5 }),
       imagemin.svgo({
         plugins: [
-          {removeViewBox: true},
-          {cleanupIDs: false}
+          { removeViewBox: true },
+          { cleanupIDs: false }
         ]
       })
     ])))
