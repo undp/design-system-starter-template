@@ -8,91 +8,91 @@
 #   Parallax Cards
 #   all Carousels
 #   Page Hero - cards
-#-components/swiper.min.css
+#- components/swiper.min.css
 #
 # Form elements
-#-components/checkbox.min.css
-#-components/radio.min.css
-#-components/input-fields.min.css
-#-components/search-expand.min.css
-#-components/custom-select.min.css
-#-components/multi-select.min.css
-#-components/text-panel.min.css
+#- components/checkbox.min.css
+#- components/radio.min.css
+#- components/input-fields.min.css
+#- components/search-expand.min.css
+#- components/custom-select.min.css
+#- components/multi-select.min.css
+#- components/text-panel.min.css
 #
 # Navigation components
-#-components/breadcrumbs.min.css
-#-components/pagination.min.css
-#-components/sidebar-data.min.css
-#-components/sidebar.min.css
+#- components/breadcrumbs.min.css
+#- components/pagination.min.css
+#- components/sidebar-data.min.css
+#- components/sidebar.min.css
 #
 # Headers
 # consult https://design.undp.org/?path=/docs/components-navigation-components-main-navigation-global-header--global-header
 # or https://design.undp.org/?path=/story/components-navigation-components-main-navigation-country-header--country-header
 # or https://design.undp.org/?path=/docs/components-navigation-components-main-navigation-country-header-dropdown-menu--docs
 # to see what to include
-#-components/country-site-header.min.css
-#-components/global-header.min.css
-#-components/menu.min.css
-#-components/mega-menu.min.css
-#-components/menu-multi-level.min.css
-#-components/menu-overflow.min.css
-#-components/mobile-nav.min.css
+#- components/country-site-header.min.css
+#- components/global-header.min.css
+#- components/menu.min.css
+#- components/mega-menu.min.css
+#- components/menu-multi-level.min.css
+#- components/menu-overflow.min.css
+#- components/mobile-nav.min.css
 #
 # UI components
-#-components/accordion.min.css
-#-components/author-summary.min.css
-#-components/author-card.min.css
-#-components/author-column.min.css
-#-components/language-switcher.min.css
-#-components/modal.min.css
+#- components/accordion.min.css
+#- components/author-summary.min.css
+#- components/author-card.min.css
+#- components/author-column.min.css
+#- components/language-switcher.min.css
+#- components/modal.min.css
 #
 # Buttons and links
-#-components/buttons.min.css
-#-components/chips.min.css
-#-components/cta-link.min.css
+#- components/buttons.min.css
+#- components/chips.min.css
+#- components/cta-link.min.css
 #
 # Cards
-#-components/bio-card.min.css
-#-components/content-card.min.css
-#-components/download-card.min.css
-#-components/featured-content-card.min.css
-#-components/image-revel-cta-card.min.css
-#-components/parallax-card.min.css
-#-components/parallax-cards.min.css
-#-components/publication-card.min.css
-#-components/stats-cards.min.css
+#- components/bio-card.min.css
+#- components/content-card.min.css
+#- components/download-card.min.css
+#- components/featured-content-card.min.css
+#- components/image-revel-cta-card.min.css
+#- components/parallax-card.min.css
+#- components/parallax-cards.min.css
+#- components/publication-card.min.css
+#- components/stats-cards.min.css
 #
 # Carousels
-#-components/fixed-size-carousel.min.css
-#-components/fluid-image-size-carousel.min.css
-#-components/image-only-carousel.min.css
+#- components/fixed-size-carousel.min.css
+#- components/fluid-image-size-carousel.min.css
+#- components/image-only-carousel.min.css
 #
 # Footer
-#-components/footer.min.css
-#-components/newsletter-signup.min.css
+#- components/footer.min.css
+#- components/newsletter-signup.min.css
 #
 # Galleries
-#-components/lightbox-gallery.min.css
-#-components/lightbox.min.css
-#-components/parallax-gallery.min.css
+#- components/lightbox-gallery.min.css
+#- components/lightbox.min.css
+#- components/parallax-gallery.min.css
 #
 # Heros
-#-components/homepage-hero.min.css
-#-components/page.min.css
-#-components/country-card.min.css
-#-components/pagehero-cards.min.css
+#- components/homepage-hero.min.css
+#- components/page.min.css
+#- components/country-card.min.css
+#- components/pagehero-cards.min.css
 #
 # Text components/blocks
-#-components/blockquotecomp.min.css
-#-components/cta-block.min.css
-#-components/headingbig.min.css
-#-components/post.min.css
-#-components/smallcopy.min.css
-#-components/tertiary.min.css
-#-components/textbackground.min.css
-#-components/textcta.min.css
+#- components/blockquotecomp.min.css
+#- components/cta-block.min.css
+#- components/headingbig.min.css
+#- components/post.min.css
+#- components/smallcopy.min.css
+#- components/tertiary.min.css
+#- components/textbackground.min.css
+#- components/textcta.min.css
 #
 # Utilities
-#-components/frosted-background.min.css
-#-components/loader.min.css
-#-components/progress-bar.min.css
+#- components/frosted-background.min.css
+#- components/loader.min.css
+#- components/progress-bar.min.css
