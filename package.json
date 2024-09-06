@@ -1,6 +1,6 @@
 {
   "name": "@undp/design-system-starter-template",
-  "version": "1.2.11",
+  "version": "1.2.12",
   "description": "Boilerplate starting project for sites using UNDP Design System",
   "main": "gulpfile.babel.js",
   "scripts": {
