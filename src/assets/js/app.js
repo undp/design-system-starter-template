@@ -1,4 +1,4 @@
-import $ from 'jquery';
+// import $ from 'jquery';
 
 // Load individual modules
 // import { expandSearch } from '@undp/design-system/stories/assets/js/expand-search';
@@ -17,12 +17,12 @@ import $ from 'jquery';
 // import { langSwitch } from '@undp/design-system/stories/assets/js/lang-switcher';
 // import { statsHover } from '@undp/design-system/stories/assets/js/stats';
 
-window.jQuery = $;
+// window.jQuery = $;
 
 // Enable in view animations, wired via data-viewport=true attribute
-require('@undp/design-system/stories/assets/js/viewport');
+// require('@undp/design-system/stories/assets/js/viewport');
 // global constants
-require('@undp/design-system/stories/assets/js/undp');
+// require('@undp/design-system/stories/assets/js/undp');
 
 // Initialize components
 
