@@ -13,9 +13,9 @@ import named from 'vinyl-named';
 import autoprefixer from 'autoprefixer';
 import imagemin from 'gulp-imagemin';
 
-const sass = require('gulp-sass')(require('sass'));
+const sass = require('gulp-sass')(require('sass-embedded'));
 const postcss = require('gulp-postcss');
-const url = require("postcss-url");
+// const url = require("postcss-url");
 
 // const uncss = require('postcss-uncss'); // uncomment if required
 // const UNCSS_OPTIONS = {
@@ -33,7 +33,7 @@ const PATH_PUBLISH = 'docs';
 const PATH_ASSETS = ['src/assets/**/*', '!src/assets/{img,js,scss}/**/*'];
 const PATH_SASS = ['node_modules/@undp/design-system/stories'];
 const PATH_JS = 'src/assets/js/app.js';
-const CDN = 'https://cdn.jsdelivr.net/npm/@undp/design-system-assets/';
+// const CDN = 'https://cdn.jsdelivr.net/npm/@undp/design-system-assets/';
 const PORT = 8000;
 
 // Check for --production flag
@@ -109,12 +109,12 @@ function sassBuild() {
 
   return gulp.src('src/assets/scss/app.scss')
     .pipe($.sourcemaps.init())
-    .pipe(sass({
+    .pipe(sass.sync({
       includePaths: PATH_SASS
     })
       .on('error', sass.logError))
     .pipe(postcss(postCssPlugins))
-    .pipe($.if(PRODUCTION, $.cleanCss({ compatibility: 'ie11', level: { 1: { specialComments: 0 } } })))
+    .pipe($.if(PRODUCTION, $.cleanCss({ level: { 1: { specialComments: 0 } } })))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest(PATH_DIST + '/assets/css'))
     .pipe(browser.reload({ stream: true }));
