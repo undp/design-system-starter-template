@@ -60,13 +60,13 @@ function clean(done) {
 // Copy files out of the assets folder
 // This task skips over the "img", "js", and "scss" folders, which are parsed separately
 function copy() {
-  return gulp.src(PATH_ASSETS)
+  return gulp.src(PATH_ASSETS, { encoding: false })
     .pipe(gulp.dest(PATH_DIST + '/assets'));
 }
 
 // copy compiled assets to final destination
 function publish() {
-  return gulp.src(PATH_DIST + '/**/*')
+  return gulp.src(PATH_DIST + '/**/*', { encoding: false })
     .pipe($.if(PRODUCTION, gulp.dest(PATH_PUBLISH)));
 }
 
@@ -161,7 +161,7 @@ function javascript() {
 // Copy images to the "dist" folder
 // In production, the images are compressed
 function images() {
-  return gulp.src('src/assets/img/**/*')
+  return gulp.src('src/assets/img/**/*', { encoding: false })
     .pipe($.if(PRODUCTION, imagemin([
       imagemin.gifsicle({ interlaced: true }),
       imagemin.mozjpeg({ quality: 85, progressive: true }),
