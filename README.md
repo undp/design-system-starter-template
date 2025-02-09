@@ -17,7 +17,7 @@ Boilerplate project for sites using [UNDP Design System](https://design.undp.org
 ### **Ready to use static site generator**
 Inspired by [ZURB Template](https://get.foundation/sites/docs/starter-projects.html#zurb-template)
 - Sass compilaton. Using DartSass library with source maps support.
-- Javascript compilation. Transpiled with [Babel](https://babeljs.io/), bundling is handled via [Webpack](https://webpack.js.org/)
+- Javascript compilation. Transpiled with [SWC](https://swc.rs/), packaged with [Webpack](https://webpack.js.org/)
 - Assets copying for distribution. Image compressed and optimized using [imagemin](https://github.com/imagemin/imagemin)
 - Page compilation. Based on flat file compiler [Panini](https://get.foundation/sites/docs/panini.html) using [Handlebars](https://handlebarsjs.com/) template language
 - Development mode with [BrowserSync](https://browsersync.io/) server, file watching and on the fly compilation

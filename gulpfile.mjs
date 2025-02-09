@@ -1,8 +1,6 @@
 // inspired by Zurb Foundation starter project
 // https://github.com/foundation/foundation-zurb-template
 
-import plugins from 'gulp-load-plugins';
-import yargs from 'yargs';
 import browser from 'browser-sync';
 import gulp from 'gulp';
 import panini from 'panini';
@@ -10,22 +8,16 @@ import { rimraf } from 'rimraf';
 import webpackStream from 'webpack-stream';
 import webpack2 from 'webpack';
 import named from 'vinyl-named';
-import autoprefixer from 'autoprefixer';
 import imagemin from 'gulp-imagemin';
+import * as dartSass from 'sass';
+import gulpSass from 'gulp-sass';
+import autoprefixer from 'gulp-autoprefixer';
+import sourcemaps from 'gulp-sourcemaps';
+import CleanCSS from 'gulp-clean-css';
+import iif from 'gulp-if';
+import TerserPlugin from 'terser-webpack-plugin';
 
-const sass = require('gulp-sass')(require('sass-embedded'));
-const postcss = require('gulp-postcss');
-// const url = require("postcss-url");
-
-// const uncss = require('postcss-uncss'); // uncomment if required
-// const UNCSS_OPTIONS = {
-//   html: 'dist/**/*.html',
-//   timeout: 1000,
-//   ignore: ['.foundation-mq', '!!js/regexp /\.is-\w+/'],
-// }
-
-// Load all Gulp plugins into one variable
-const $ = plugins();
+const sass = gulpSass(dartSass);
 
 // file locations
 const PATH_DIST = 'dist';
@@ -33,11 +25,10 @@ const PATH_PUBLISH = 'docs';
 const PATH_ASSETS = ['src/assets/**/*', '!src/assets/{img,js,scss}/**/*'];
 const PATH_SASS = ['node_modules/@undp/design-system/stories'];
 const PATH_JS = 'src/assets/js/app.js';
-// const CDN = 'https://cdn.jsdelivr.net/npm/@undp/design-system-assets/';
 const PORT = 8000;
 
 // Check for --production flag
-const PRODUCTION = !!(yargs.argv.production);
+const PRODUCTION = process.argv.includes('--production');
 
 // Build the "docs" folder by running all of the below tasks
 // Sass must be run later so UnCSS can search for used classes in the others assets.
@@ -67,7 +58,7 @@ function copy() {
 // copy compiled assets to final destination
 function publish() {
   return gulp.src(PATH_DIST + '/**/*', { encoding: false })
-    .pipe($.if(PRODUCTION, gulp.dest(PATH_PUBLISH)));
+    .pipe(iif(PRODUCTION, gulp.dest(PATH_PUBLISH)));
 }
 
 // Copy page templates into finished HTML files
@@ -93,44 +84,60 @@ function resetPages(done) {
 // In production, the CSS is compressed
 function sassBuild() {
 
-  const postCssPlugins = [
-    // Autoprefixer
-    autoprefixer(),
-    // externalize icon links in imported stylesheets
-    // url({
-    //   filter: '**/assets/icons/*.svg',
-    //   url: (asset) => {
-    //     return CDN + '/images/' + asset.url.split('/').at(-1);
-    //   },
-    // }),
-    // UnCSS - Uncomment to remove unused styles in production
-    // PRODUCTION && uncss(UNCSS_OPTIONS),
-  ].filter(Boolean);
-
   return gulp.src('src/assets/scss/app.scss')
-    .pipe($.sourcemaps.init())
+    .pipe(sourcemaps.init())
     .pipe(sass.sync({
       includePaths: PATH_SASS
-    })
-      .on('error', sass.logError))
-    .pipe(postcss(postCssPlugins))
-    .pipe($.if(PRODUCTION, $.cleanCss({ level: { 1: { specialComments: 0 } } })))
-    .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
+    }).on('error', sass.logError))
+    .pipe(autoprefixer())
+    .pipe(iif(PRODUCTION, CleanCSS({ level: { 1: { specialComments: 0 } } })))
+    .pipe(iif(!PRODUCTION, sourcemaps.write()))
     .pipe(gulp.dest(PATH_DIST + '/assets/css'))
     .pipe(browser.reload({ stream: true }));
 }
 
 let webpackConfig = {
   mode: (PRODUCTION ? 'production' : 'development'),
+  optimization: {
+    minimizer: [
+      new TerserPlugin({
+        minify: TerserPlugin.swcMinify
+      })
+    ]
+  },
   module: {
     rules: [
       {
         test: /\.js$/,
+        exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: 'swc-loader',
           options: {
-            presets: ["@babel/preset-env"],
-            compact: false
+            module: {
+              type: "es6"
+            },
+            minify: process.env.NODE_ENV !== "development",
+            isModule: true,
+            jsc: {
+              minify: {
+                compress: true,
+                mangle: true,
+                format: {
+                  asciiOnly: true,
+                  comments: /^ webpack/
+                }
+              },
+              target: "es2016",
+              parser: {
+                syntax: "typescript",
+                tsx: true
+              },
+              transform: {
+                react: {
+                  runtime: "automatic"
+                }
+              }
+            }
           }
         }
       }
@@ -149,12 +156,9 @@ let webpackConfig = {
 function javascript() {
   return gulp.src(PATH_JS)
     .pipe(named())
-    .pipe($.sourcemaps.init())
+    .pipe(sourcemaps.init())
     .pipe(webpackStream(webpackConfig, webpack2))
-    .pipe($.if(PRODUCTION, $.terser()
-      .on('error', e => { console.log(e); })
-    ))
-    .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
+    .pipe(iif(!PRODUCTION, sourcemaps.write()))
     .pipe(gulp.dest(PATH_DIST + '/assets/js'));
 }
 
@@ -162,7 +166,7 @@ function javascript() {
 // In production, the images are compressed
 function images() {
   return gulp.src('src/assets/img/**/*', { encoding: false })
-    .pipe($.if(PRODUCTION, imagemin([
+    .pipe(iif(PRODUCTION, imagemin([
       imagemin.gifsicle({ interlaced: true }),
       imagemin.mozjpeg({ quality: 85, progressive: true }),
       imagemin.optipng({ optimizationLevel: 5 }),
