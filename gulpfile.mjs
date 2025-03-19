@@ -11,9 +11,11 @@ import named from 'vinyl-named';
 import imagemin from 'gulp-imagemin';
 import * as dartSass from 'sass';
 import gulpSass from 'gulp-sass';
-import autoprefixer from 'gulp-autoprefixer';
+import autoprefixer from 'autoprefixer';
+import postcss from '@sequencemedia/gulp-postcss';
+import cssnano from 'cssnano';
+import defaultPreset from 'cssnano-preset-default';
 import sourcemaps from 'gulp-sourcemaps';
-import CleanCSS from 'gulp-clean-css';
 import iif from 'gulp-if';
 import TerserPlugin from 'terser-webpack-plugin';
 
@@ -82,6 +84,8 @@ function resetPages(done) {
 
 // Compile Sass into CSS
 // In production, the CSS is compressed
+const preset = defaultPreset();
+
 function sassBuild() {
 
   return gulp.src('src/assets/scss/app.scss')
@@ -89,8 +93,7 @@ function sassBuild() {
     .pipe(sass.sync({
       includePaths: PATH_SASS
     }).on('error', sass.logError))
-    .pipe(autoprefixer())
-    .pipe(iif(PRODUCTION, CleanCSS({ level: { 1: { specialComments: 0 } } })))
+    .pipe(iif(PRODUCTION, postcss([cssnano({ preset, plugins: [autoprefixer] })])))
     .pipe(iif(!PRODUCTION, sourcemaps.write()))
     .pipe(gulp.dest(PATH_DIST + '/assets/css'))
     .pipe(browser.reload({ stream: true }));
