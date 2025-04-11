@@ -24,57 +24,11 @@ require('@undp/design-system/stories/assets/js/viewport');
 // global constants
 require('@undp/design-system/stories/assets/js/undp');
 
-// Initialize components
-
-// Enhanced form fields
-// expandSearch();
-// multiSelect();
-// select();
-
-// Side bar navigation
-// sidebarNav();
-// sidebarMenu();
-
-// Mega menu / Dropdown menu
-// navigationInitialize();
-// navigationMultiLevelEdgeDetection();
-// navigationOverFlow();
-
-// Accordion
-// accordion();
-
-// Parallax Cards
-// parallaxEffect('.parallax-card', ['.parallax-cardimage', '.parallax-cardcontent'], 'top center', 'bottom+=85 center', 'vertical', 'desktop', 'percent');
-// swiper('.parallax__content');
+// Smart resize
 // require('@undp/design-system/stories/assets/js/smartresize');
-
-// Stats card
-// fitText('.stats-card.medium', {desktop: 110, mobile: 80});
-
-// Carousels
-// swiper('.fixed-carousel', '.fixed-carousel__button-wrap'); // Fixed image carousel
-// swiper('.fluid-carousel', '.slide-content'); // Fluid image carousel
-// swiper('.image-carousel', '.slider-slide'); // Image only carousel
-
-// Galleries
-// window.GLightbox = GLightbox;
-// lightboxGallery();
-// parallaxEffect('.parallax-gallery-images', '.column', 'top center', 'bottom+=15% center', 'vertical', 'all');
-
-// Heros
-// expandToSize('.homepage-hero-full');
-// expandToSize('.pagehero-fulll');
-// swiper('.pagehero-cards-items')
-// require('@undp/design-system/stories/assets/js/smartresize');
-
-// Language switcher
-// langSwitch();
-
-// Modal
-// modal();
-
-// Stats
-// statsHover();
 
 // Progress bar
 // require('@undp/design-system/stories/assets/js/scrolling-progress-bar');
+
+// Components visualization should be done implicitly as of UNDP Design System v1.4
+// https://github.com/undp/design-system/releases/tag/v1.4.0
