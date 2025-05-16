@@ -1,7 +1,7 @@
 # generic info
 lang: fr
 language: Français
-cdn: https://cdn.jsdelivr.net/npm/@undp/design-system-assets/
+cdn: https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.4.5/
 
 # page metadata
 meta:
