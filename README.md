@@ -3,9 +3,11 @@ Boilerplate project for sites using [UNDP Design System](https://design.undp.org
 
 ## What's included?
 
-### **Baseline stylesheet** (13.3KB minified and gzipped)
+### **Baseline stylesheet** (17.2KB minified and gzipped)
 - [Grid system](https://design.undp.org/?path=/story/foundation-layout-grid--page)
-- UNDP official web typefaces: ProximaNova and Söhne
+- UNDP official web typefaces: **ProximaNova** and **Söhne**
+- Brand [color palette](https://design.undp.org/?path=/docs/foundation-colors--docs)
+- Basic [icons](https://design.undp.org/?path=/docs/foundation-icons--docs)
 - Design System variables available as [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
 - basic HTML elements styling:
   - [H1-6 headings](https://design.undp.org/?path=/story/foundation-typography-base-typography--headings)

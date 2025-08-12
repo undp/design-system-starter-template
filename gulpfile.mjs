@@ -8,7 +8,7 @@ import { rimraf } from 'rimraf';
 import webpackStream from 'webpack-stream';
 import webpack2 from 'webpack';
 import named from 'vinyl-named';
-import imagemin from 'gulp-imagemin';
+import imagemin, { gifsicle, mozjpeg, optipng, svgo } from 'gulp-imagemin';
 import * as dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 import autoprefixer from 'autoprefixer';
@@ -52,7 +52,7 @@ function clean(done) {
 
 // Copy files out of the assets folder
 // This task skips over the "img", "js", and "scss" folders, which are parsed separately
-function copy() {
+async function copy() {
   return gulp.src(PATH_ASSETS, { encoding: false })
     .pipe(gulp.dest(PATH_DIST + '/assets'));
 }
@@ -64,7 +64,7 @@ function publish() {
 }
 
 // Copy page templates into finished HTML files
-function pages() {
+async function pages() {
   return gulp.src('src/pages/**/*.{html,hbs,handlebars}')
     .pipe(panini({
       root: 'src/pages/',
@@ -156,7 +156,7 @@ let webpackConfig = {
 
 // Combine JavaScript into one file
 // In production, the file is minified
-function javascript() {
+async function javascript() {
   return gulp.src(PATH_JS)
     .pipe(named())
     .pipe(sourcemaps.init())
@@ -167,13 +167,13 @@ function javascript() {
 
 // Copy images to the "dist" folder
 // In production, the images are compressed
-function images() {
+async function images() {
   return gulp.src('src/assets/img/**/*', { encoding: false })
     .pipe(iif(PRODUCTION, imagemin([
-      imagemin.gifsicle({ interlaced: true }),
-      imagemin.mozjpeg({ quality: 85, progressive: true }),
-      imagemin.optipng({ optimizationLevel: 5 }),
-      imagemin.svgo({
+      gifsicle({ interlaced: true }),
+      mozjpeg({ quality: 85, progressive: true }),
+      optipng({ optimizationLevel: 5 }),
+      svgo({
         plugins: [
           { removeViewBox: true },
           { cleanupIDs: false }
