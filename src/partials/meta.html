@@ -17,11 +17,11 @@
 <link rel="alternate" hreflang="en" href="{{@root.root}}" />
 <link rel="alternate" hreflang="fr" href="{{@root.root}}fr/" />
 <link rel="alternate" hreflang="es" href="{{@root.root}}es/" />
-
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
 {{#each @root.ds}}
-  <link rel="preload" href="{{../cdn}}css/{{this}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="{{../cdn}}css/{{this}}">
 {{/each}}
-<link rel="preload" href="{{@root.root}}assets/css/app.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="stylesheet" href="{{@root.root}}assets/css/app.css">
 
 {{#if this.gtm}}<!-- Google Tag Manager -->
   <script>(function (w, d, s, l, i) {
