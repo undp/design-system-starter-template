@@ -1,1 +1,35 @@
-<header></header>
+<header class="country-header">
+  <section class="header">
+    <div class="grid-container fluid">
+      <div class="grid-x grid-margin-x align-content-middle">
+        <div class="cell small-8 large-2 shrink align-self-middle top-left">
+          <a href="https://www.undp.org/{{#ifequal lang "en"}}{{else}}{{lang}}{{/ifequal}}" class="logo" tabindex="0">
+            <img src="{{cdn}}images/{{logo}}-logo-blue.svg" alt="{{logo}} Logo" />
+          </a>
+        </div>
+        <div class="cell small-3 large-auto top-right">
+          <div class="dropdown-language" data-undpds-component="language-switcher">
+            <button aria-expanded="false"><span>{{language}}</span></button>
+            <ul role="menu">
+              {{#ifequal lang "en"}}{{else}}
+              <li role="menuitem">
+                <a href="{{@root.root}}" lang="en" hreflang="en" tabindex="-1">English</a>
+              </li>
+              {{/ifequal}}
+              {{#ifequal lang "es"}}{{else}}
+              <li role="menuitem">
+                <a href="{{@root.root}}es/" lang="es" hreflang="es" tabindex="-1">Español</a>
+              </li>
+              {{/ifequal}}
+              {{#ifequal lang "fr"}}{{else}}
+              <li role="menuitem">
+                <a href="{{@root.root}}fr/" lang="fr" hreflang="fr" tabindex="-1">Français</a>
+              </li>
+              {{/ifequal}}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</header>
