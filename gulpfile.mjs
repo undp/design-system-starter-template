@@ -8,7 +8,7 @@ import { rimraf } from 'rimraf';
 import webpackStream from 'webpack-stream';
 import webpack2 from 'webpack';
 import named from 'vinyl-named';
-import imagemin, { gifsicle, mozjpeg, optipng, svgo } from 'gulp-imagemin';
+// import imagemin, { gifsicle, mozjpeg, optipng, svgo } from 'gulp-imagemin';
 import * as dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 import autoprefixer from 'autoprefixer';
@@ -35,7 +35,7 @@ const PRODUCTION = process.argv.includes('--production');
 // Build the "docs" folder by running all of the below tasks
 // Sass must be run later so UnCSS can search for used classes in the others assets.
 gulp.task('build',
-  gulp.series(clean, gulp.parallel(pages, javascript, images, copy), sassBuild, publish)
+  gulp.series(clean, pages, javascript, images, copy, sassBuild, publish)
 );
 
 // Build the site, run the server, and watch for file changes
@@ -52,7 +52,7 @@ function clean(done) {
 
 // Copy files out of the assets folder
 // This task skips over the "img", "js", and "scss" folders, which are parsed separately
-async function copy() {
+function copy() {
   return gulp.src(PATH_ASSETS, { encoding: false })
     .pipe(gulp.dest(PATH_DIST + '/assets'));
 }
@@ -64,7 +64,7 @@ function publish() {
 }
 
 // Copy page templates into finished HTML files
-async function pages() {
+function pages() {
   return gulp.src('src/pages/**/*.{html,hbs,handlebars}')
     .pipe(panini({
       root: 'src/pages/',
@@ -156,7 +156,7 @@ let webpackConfig = {
 
 // Combine JavaScript into one file
 // In production, the file is minified
-async function javascript() {
+function javascript() {
   return gulp.src(PATH_JS)
     .pipe(named())
     .pipe(sourcemaps.init())
@@ -167,19 +167,19 @@ async function javascript() {
 
 // Copy images to the "dist" folder
 // In production, the images are compressed
-async function images() {
+function images() {
   return gulp.src('src/assets/img/**/*', { encoding: false })
-    .pipe(iif(PRODUCTION, imagemin([
-      gifsicle({ interlaced: true }),
-      mozjpeg({ quality: 85, progressive: true }),
-      optipng({ optimizationLevel: 5 }),
-      svgo({
-        plugins: [
-          { removeViewBox: true },
-          { cleanupIDs: false }
-        ]
-      })
-    ])))
+    // .pipe(iif(PRODUCTION, imagemin([
+    //   gifsicle({ interlaced: true }),
+    //   mozjpeg({ quality: 85, progressive: true }),
+    //   optipng({ optimizationLevel: 5 }),
+    //   svgo({
+    //     plugins: [
+    //       { removeViewBox: true },
+    //       { cleanupIDs: false }
+    //     ]
+    //   })
+    // ])))
     .pipe(gulp.dest(PATH_DIST + '/assets/img'));
 }
 
