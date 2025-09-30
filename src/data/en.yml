@@ -1,7 +1,12 @@
 # generic info
 lang: en
 language: English
-cdn: https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.4.6/
+cdn: https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.4.7/
+logo: undp
+undp:
+  text: United Nations Development Programme
+  html: United Nations <br>Development Programme
+
 
 # page metadata
 meta:
@@ -11,3 +16,14 @@ content:
   link:
     url: https://design.undp.org/
     label: UNDP Design System
+  footer:
+    socialLinks:
+      facebook: https://www.facebook.com/UNDP/
+      linkedin: https://www.linkedin.com/company/undp
+      instagram: https://www.instagram.com/UNDP/
+      threads: https://threads.net/@undp
+      twitter: https://twitter.com/undp/
+      youtube: https://www.youtube.com/UNDP
+    terms:
+      text: Terms of use
+      url: https://www.undp.org/copyright-terms-use

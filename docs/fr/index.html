@@ -10,7 +10,7 @@
       <link rel="canonical" href="fr/" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content="" />
-      <meta property="og:site_name" content="" />
+      <meta property="og:site_name" content="pnud" />
       <meta property="og:url" content="fr/" />
       <meta property="og:description" content="" />
       <meta property="og:image" content="assets/img/" />
@@ -21,15 +21,44 @@
       <link rel="alternate" hreflang="en" href="../" />
       <link rel="alternate" hreflang="fr" href="../fr/" />
       <link rel="alternate" hreflang="es" href="../es/" />
-      
-        <link rel="preload" href="https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.4.5/css/base-minimal.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-      <link rel="preload" href="../assets/css/app.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <link rel="preconnect" href="https://cdn.jsdelivr.net">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.4.7/css/base-minimal.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.4.7/css/components/country-site-header.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.4.7/css/components/language-switcher.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.4.7/css/components/footer.min.css">
+      <link rel="stylesheet" href="../assets/css/app.css">
       
     </head>
 
     <body id="top">
-      <header></header>
-      <main class="homepage">
+      <header class="country-header">
+        <section class="header">
+          <div class="grid-container fluid">
+            <div class="grid-x grid-margin-x align-content-middle">
+              <div class="cell small-8 large-2 shrink align-self-middle top-left">
+                <a href="https://www.undp.org/fr" class="logo" tabindex="0">
+                  <img src="https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.4.7/images/pnud-logo-blue.svg" alt="pnud Logo" />
+                </a>
+              </div>
+              <div class="cell small-3 large-auto top-right">
+                <div class="dropdown-language" data-undpds-component="language-switcher">
+                  <button aria-expanded="false"><span>Français</span></button>
+                  <ul role="menu">
+                    
+                    <li role="menuitem">
+                      <a href="../" lang="en" hreflang="en" tabindex="-1">English</a>
+                    </li>
+                    
+                    <li role="menuitem">
+                      <a href="../es/" lang="es" hreflang="es" tabindex="-1">Español</a>
+                    </li>
+                                </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </header><main class="homepage">
         <div class="grid-container">
           <div class="grid-x">
             <div class="cell">
@@ -41,14 +70,86 @@
           </div>
         </div>
       </main>
-      <footer></footer>
-      <script src="https://cdn.jsdelivr.net/npm/jquery@4.0.0-beta.2/dist/jquery.min.js"></script>
+      <footer class="footer">
+        <div class="grid-x">
+          <div class="cell medium-10 medium-offset-1">
+            <div class="grid-x footer-top">
+              <div class="cell medium-5">
+                <div class="footer-logo">
+                  <a href="https://www.undp.org/fr">
+                    <img src="https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.4.7/images/pnud-logo-white.svg" alt="UNDP Logo" />
+                  </a>
+                  <h5 class="" tabindex="0" data-viewport="false">Programme des Nations Unies<br>pour le développement</h5>
+                </div>
+              </div>
+              <div class="cell medium-5 show-large">
+                <ul class="footer-icons">
+                  <li>
+                    <a href="https://x.com/pnudfr/" class="twitter-x" title="Twitter">twitter</a>
+                  </li>
+                  <li>
+                    <a href="https://www.linkedin.com/company/undp" class="linkedin" title="LinkedIn">linkedIn</a>
+                  </li>
+                  <li>
+                    <a href="https://www.facebook.com/pnudfr/" class="facebook" title="Facebook">facebook</a>
+                  </li>
+                  <li>
+                    <a href="" class="threads" title="Threads">threads</a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/UNDP/" class="instagram" title="Instagram">instagram</a>
+                  </li>
+                  <li>
+                    <a href="https://www.youtube.com/UNDP" class="youtube" title="Youtube">youtube</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="grid-x footer-bottom">
+              <div class="cell medium-5">
+                <p tabindex="0">&copy; 2025 Programme des Nations Unies pour le développement</p>
+              </div>
+              <div class="cell medium-6">
+                <ul class="footer-lists">
+                  <li>
+                    <a href="https://www.undp.org/fr/droits-dauteur-et-conditions-dutilisation">Conditions d&#x27;utilisation</a>
+                  </li>
+                </ul>
+                <div class="show-small">
+                  <ul class="footer-icons">
+                    <li>
+                      <a href="https://x.com/pnudfr/" class="twitter-x" title="Twitter">twitter</a>
+                    </li>
+                    <li>
+                      <a href="https://www.linkedin.com/company/undp" class="linkedin" title="LinkedIn">linkedIn</a>
+                    </li>
+                    <li>
+                      <a href="https://www.facebook.com/pnudfr/" class="facebook" title="Facebook">facebook</a>
+                    </li>
+                    <li>
+                      <a href="" class="threads" title="Threads">threads</a>
+                    </li>
+                    <li>
+                      <a href="https://www.instagram.com/UNDP/" class="instagram" title="Instagram">instagram</a>
+                    </li>
+                    <li>
+                      <a href="https://www.youtube.com/UNDP" class="youtube" title="Youtube">youtube</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <script src="https://cdn.jsdelivr.net/npm/jquery@4.0.0-rc.1/dist/jquery.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/EasePack.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/swiper@11.2.6/swiper-bundle.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11.2.10/swiper-bundle.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.4.7/js/lang-switcher.min.js"></script>
       <script src="../assets/js/app.js"></script>
-      
+      <script src="https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.4.7/js/init.js" defer></script>
     </body>
 
   </html>

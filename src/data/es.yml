@@ -1,7 +1,11 @@
 # generic info
 lang: es
 language: Español
-cdn: https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.4.6/
+cdn: https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.4.7/
+logo: pnud
+undp:
+  text: Programa de las Naciones Unidas para el Desarrollo
+  html: Programa de las Naciones Unidas<br>para el Desarrollo
 
 # page metadata
 meta:
@@ -11,3 +15,14 @@ content:
   link:
     url: https://design.undp.org/
     label: Sistema de diseño del PNUD
+  footer:
+    socialLinks:
+      facebook: https://www.facebook.com/PNUD/
+      linkedin: https://www.linkedin.com/company/undp
+      instagram: https://www.instagram.com/UNDP/
+      threads: https://threads.net/@undp
+      twitter: https://twitter.com/pnud/
+      youtube: https://www.youtube.com/UNDP
+    terms:
+      text: Términos de uso
+      url: https://www.undp.org/es/derechos-de-autor-y-condiciones-de-uso

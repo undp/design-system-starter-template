@@ -18,7 +18,7 @@
 <link rel="alternate" hreflang="fr" href="{{@root.root}}fr/" />
 <link rel="alternate" hreflang="es" href="{{@root.root}}es/" />
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
-{{#each @root.ds}}
+{{#each @root.ds.css}}
   <link rel="stylesheet" href="{{../cdn}}css/{{this}}">
 {{/each}}
 <link rel="stylesheet" href="{{@root.root}}assets/css/app.css">
