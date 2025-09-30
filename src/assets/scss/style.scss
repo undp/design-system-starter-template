@@ -1,9 +1,13 @@
-main {
+body {
+  min-height: 100dvh;
   display: flex;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
-  .cell {
-    text-align: center;
-  }
+  justify-content: space-between;
+  flex-direction: column;
+}
+main {
+  text-align: center;
+}
+.footer-icons li a.threads {
+  background: url(../img/threads-white.svg) no-repeat bottom;
+  background-size: 20px;
 }
