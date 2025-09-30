@@ -44,6 +44,7 @@ css:
   #- components/author-summary.min.css
   #- components/author-card.min.css
   #- components/author-column.min.css
+  #- components/image-caption.min.css
   - components/language-switcher.min.css
   #- components/modal.min.css
   #
