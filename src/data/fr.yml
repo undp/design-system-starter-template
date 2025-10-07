@@ -1,7 +1,7 @@
 # generic info
 lang: fr
 language: Français
-cdn: https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.4.7/
+cdn: https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.4.8/
 logo: pnud
 undp:
   text: Programme des Nations Unies pour le développement
