@@ -109,3 +109,6 @@ dist
 # Yarn cache and config
 .yarn
 .yarnrc.yml
+
+# build
+docs

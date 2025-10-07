@@ -1,13 +1,48 @@
-body {
-  min-height: 100dvh;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+@use "../../../node_modules/@undp/design-system/stories/assets/scss/breakpoints";
+
+// Simplest version of the header with responsive Language switcher.
+.country-header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+
+  .header {
+    background: transparent;
+    box-shadow: none;
+    position: absolute;
+
+    @include breakpoints.devicebreak(medium) {
+      background-size: auto;
+    }
+
+    .dropdown-language {
+      display: block;
+
+      ul {
+        left: auto;
+        right: 0;
+      }
+
+      span {
+        display: none;
+
+        @include breakpoints.devicebreak(medium) {
+          display: inline-block;
+        }
+      }
+    }
+
+    .top-right> :last-child {
+      margin: 0;
+    }
+  }
 }
+
 main {
   text-align: center;
-}
-.footer-icons li a.threads {
-  background: url(../img/threads-white.svg) no-repeat bottom;
-  background-size: 20px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
