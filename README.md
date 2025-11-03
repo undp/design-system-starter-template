@@ -3,7 +3,7 @@ Boilerplate project for sites using [UNDP Design System](https://design.undp.org
 
 ## What's included?
 
-### **Baseline stylesheet** (17.2KB minified and gzipped)
+### **Baseline stylesheet** (17.7KB minified and gzipped)
 - [Grid system](https://design.undp.org/?path=/story/foundation-layout-grid--page)
 - UNDP official web typefaces: **ProximaNova** and **Söhne**
 - Brand [color palette](https://design.undp.org/?path=/docs/foundation-colors--docs)
@@ -21,7 +21,7 @@ Boilerplate project for sites using [UNDP Design System](https://design.undp.org
 Inspired by [ZURB Template](https://get.foundation/sites/docs/starter-projects.html#zurb-template)
 - Sass compilaton. Using DartSass library with source maps support.
 - Javascript compilation. Transpiled with [SWC](https://swc.rs/), packaged with [Webpack](https://webpack.js.org/)
-- Assets copying for distribution. Image compressed and optimized using [imagemin](https://github.com/imagemin/imagemin)
+- Assets copying for distribution. Image (optionally) compressed and optimized using [imagemin](https://github.com/imagemin/imagemin)
 - Page compilation. Based on flat file compiler [Panini](https://get.foundation/sites/docs/panini.html) using [Handlebars](https://handlebarsjs.com/) template language
 - Development mode with [BrowserSync](https://browsersync.io/) server, file watching and on the fly compilation
 - Content decoupled from layout for easy translation via data files
