@@ -1,6 +1,6 @@
 {
   "name": "@undp/design-system-starter-template",
-  "version": "1.4.8",
+  "version": "1.5.1",
   "description": "Boilerplate starting project for sites using UNDP Design System",
   "main": "gulpfile.mjs",
   "scripts": {
@@ -10,7 +10,7 @@
   "author": "Jura Khrapunov <jura.khrapunov@undp.org>",
   "license": "MIT",
   "dependencies": {
-    "@undp/design-system": "^1.4.8",
+    "@undp/design-system": "^1.5.1",
     "glightbox": "^3.3.1",
     "gsap": "^3.13.0",
     "jquery": "^4.0.0-rc.1",
