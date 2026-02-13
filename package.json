@@ -1,6 +1,6 @@
 {
   "name": "@undp/design-system-starter-template",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "description": "Boilerplate starting project for sites using UNDP Design System",
   "main": "gulpfile.mjs",
   "scripts": {
@@ -13,15 +13,15 @@
     "@undp/design-system": "^1.6.1",
     "glightbox": "^3.3.1",
     "gsap": "^3.14.2",
-    "jquery": "^4.0.0-rc.1",
+    "jquery": "^4.0.0",
     "normalize.css": "^8.0.1",
-    "swiper": "^12.0.3"
+    "swiper": "^12.1.0"
   },
   "devDependencies": {
     "@sequencemedia/gulp-postcss": "^1.0.311",
-    "@swc/cli": "^0.7.9",
-    "@swc/core": "^1.15.7",
-    "autoprefixer": "^10.4.23",
+    "@swc/cli": "^0.8.0",
+    "@swc/core": "^1.15.11",
+    "autoprefixer": "^10.4.24",
     "browser-sync": "^3.0.4",
     "cssnano": "^7.1.2",
     "cssnano-preset-default": "^7.0.10",
@@ -34,13 +34,13 @@
     "gulp-swc": "^2.2.0",
     "panini": "latest",
     "rimraf": "^6.1.2",
-    "sass": "^1.97.1",
-    "sass-embedded": "^1.97.1",
-    "swc-loader": "^0.2.6",
+    "sass": "^1.97.3",
+    "sass-embedded": "^1.97.3",
+    "swc-loader": "^0.2.7",
     "terser-webpack-plugin": "^5.3.16",
     "uncss": "^0.17.3",
     "vinyl-named": "^1.1.0",
-    "webpack": "^5.104.1",
+    "webpack": "^5.105.2",
     "webpack-stream": "^7.0.0"
   },
   "repository": {
