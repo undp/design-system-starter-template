@@ -11,6 +11,7 @@
 - SASS: Prefer CSS custom properties for theming and spacing
 - JS: Favor small, composable modules; avoid heavy dependencies
 - HTML: Keep markup semantic and minimal
+- avoid deprecated functions and constructions
 
 ## Layout
 - Use UNDP Design System, main repo with Storybook files: https://github.com/undp/design-system
