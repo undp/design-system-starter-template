@@ -1,6 +1,8 @@
 // inspired by Zurb Foundation starter project
 // https://github.com/foundation/foundation-zurb-template
 
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
 import browser from 'browser-sync';
 import gulp from 'gulp';
 import panini from 'panini';
@@ -20,6 +22,8 @@ import iif from 'gulp-if';
 import TerserPlugin from 'terser-webpack-plugin';
 
 const sass = gulpSass(dartSass);
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 // file locations
 const PATH_DIST = 'dist';
@@ -35,7 +39,7 @@ const PRODUCTION = process.argv.includes('--production');
 // Build the "docs" folder by running all of the below tasks
 // Sass must be run later so UnCSS can search for used classes in the others assets.
 gulp.task('build',
-  gulp.series(clean, pages, javascript, images, copy, sassBuild, publish)
+  gulp.series(clean, gulp.parallel(pages, javascript, images, copy), sassBuild, publish)
 );
 
 // Build the site, run the server, and watch for file changes
@@ -43,8 +47,9 @@ gulp.task('default',
   gulp.series('build', server, watch)
 );
 
-// Delete the "docs" folder
+// Delete the "dist" folder
 // This happens every time a build starts
+// Note: Webpack cache (.webpack_cache) is preserved automatically
 function clean(done) {
   rimraf.sync(PATH_DIST);
   done()
@@ -56,8 +61,6 @@ function copy() {
   return gulp.src(PATH_ASSETS, { encoding: false })
     .pipe(gulp.dest(PATH_DIST + '/assets'));
 }
-
-// copy compiled assets to final destination
 function publish() {
   return gulp.src(PATH_DIST + '/**/*', { encoding: false })
     .pipe(iif(PRODUCTION, gulp.dest(PATH_PUBLISH)));
@@ -91,9 +94,14 @@ function sassBuild() {
   return gulp.src('src/assets/scss/app.scss')
     .pipe(sourcemaps.init())
     .pipe(sass.sync({
-      includePaths: PATH_SASS
+      includePaths: PATH_SASS,
+      outputStyle: PRODUCTION ? 'compressed' : 'expanded',
+      sourceMap: !PRODUCTION,
+      precision: 10,
+      quietDeps: true  // Suppress warnings from node_modules
     }).on('error', sass.logError))
-    .pipe(iif(PRODUCTION, postcss([cssnano({ preset, plugins: [autoprefixer] })])))
+    .pipe(postcss([autoprefixer]))
+    .pipe(iif(PRODUCTION, postcss([cssnano({ preset })])))
     .pipe(iif(!PRODUCTION, sourcemaps.write()))
     .pipe(gulp.dest(PATH_DIST + '/assets/css'))
     .pipe(browser.reload({ stream: true }));
@@ -101,12 +109,31 @@ function sassBuild() {
 
 let webpackConfig = {
   mode: (PRODUCTION ? 'production' : 'development'),
+  cache: {
+    type: 'filesystem',
+    cacheDirectory: join(__dirname, '.webpack_cache'),
+    hashAlgorithm: 'md4',
+    buildDependencies: {
+      config: [__filename]
+    },
+    managedPaths: [join(__dirname, 'node_modules')],
+    idleTimeout: 60000,
+    maxAge: 1000 * 60 * 60 * 24 // 1 day
+  },
   optimization: {
     minimizer: [
       new TerserPlugin({
-        minify: TerserPlugin.swcMinify
+        minify: TerserPlugin.swcMinify,
+        terserOptions: {
+          compress: {
+            drop_console: PRODUCTION,
+            pure_funcs: PRODUCTION ? ['console.log', 'console.info'] : []
+          }
+        }
       })
-    ]
+    ],
+    usedExports: true,
+    sideEffects: false
   },
   module: {
     rules: [
@@ -151,7 +178,12 @@ let webpackConfig = {
     gsap: 'gsap',
     swiper: 'swiper',
   },
-  devtool: !PRODUCTION && 'source-map'
+  devtool: !PRODUCTION && 'source-map',
+  performance: {
+    hints: PRODUCTION ? 'warning' : false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000
+  }
 }
 
 // Combine JavaScript into one file
