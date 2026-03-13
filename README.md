@@ -8,7 +8,7 @@ Boilerplate project for sites using [UNDP Design System](https://design.undp.org
 - UNDP official web typefaces: **ProximaNova** and **Söhne**
 - Brand [color palette](https://design.undp.org/?path=/docs/foundation-colors--docs)
 - Basic [icons](https://design.undp.org/?path=/docs/foundation-icons--docs)
-- Design System variables available as [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
+- Design System design tokens available as [CSS custom properties (variables)](https://github.com/undp/design-system/blob/master/figma-tokens/css-custom-properties.md).
 - basic HTML elements styling:
   - [H1-6 headings](https://design.undp.org/?path=/story/foundation-typography-base-typography--headings)
   - Paragraph text & [links](https://design.undp.org/?path=/story/foundation-typography-links--links)
