@@ -3,7 +3,7 @@ Boilerplate project for sites using [UNDP Design System](https://design.undp.org
 
 ## What's included?
 
-### **Baseline stylesheet** (17.7KB minified and gzipped)
+### **Baseline stylesheet** (18.5KB minified and gzipped)
 - [Grid system](https://design.undp.org/?path=/story/foundation-layout-grid--page)
 - UNDP official web typefaces: **ProximaNova** and **Söhne**
 - Brand [color palette](https://design.undp.org/?path=/docs/foundation-colors--docs)
@@ -27,9 +27,7 @@ Inspired by [ZURB Template](https://get.foundation/sites/docs/starter-projects.h
 - Content decoupled from layout for easy translation via data files
 
 ### Dependencies (referenced from external CDN)
-- [jQuery](https://jquery.com/)
-- [GSAP](https://greensock.com/gsap/) with ScrollTrigger and EasePack plugins - animations and transitions
-- [Swiper](https://swiperjs.com/) - carousels and sliders
+- [Swiper](https://swiperjs.com/) - optional, used for carousels and sliders
 
 ### **Usage**
 
