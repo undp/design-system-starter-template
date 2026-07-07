@@ -70,11 +70,9 @@
     </div>
   </div>
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/jquery@4/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/EasePack.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+{{! uncomment if Carousels are in use
+<script src="https://cdn.jsdelivr.net/npm/swiper@14/swiper-bundle.min.js"></script>
+}}
 {{#each @root.ds.js}}
 <script src="{{../cdn}}js/{{this}}"></script>
 {{/each}}

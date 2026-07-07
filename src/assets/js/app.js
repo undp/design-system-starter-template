@@ -1,6 +1,3 @@
-import $ from 'jquery';
-window.jQuery = $;
-
 // Enable in view animations, wired via data-viewport=true attribute
 require('@undp/design-system/stories/assets/js/viewport');
 // global constants

@@ -174,8 +174,6 @@ let webpackConfig = {
     ]
   },
   externals: {
-    jquery: 'jQuery',
-    gsap: 'gsap',
     swiper: 'swiper',
   },
   devtool: !PRODUCTION && 'source-map',
